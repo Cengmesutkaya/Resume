@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mesut Kaya | Resume</title>
+	<style>
+		html {
+			-webkit-print-color-adjust: exact;
+			background: #464646;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		body *{
+			display:flex;
+			flex-direction:column;
+		}
+
+		html,
+		body {
+			font-size: 14px;
+			margin: 0;
+			padding: 0 1rem;
+			page-break-inside: auto;
+		}
+
+		@media only screen {
+			body {
+				margin: 0 auto;
+				max-width: 900px;
+				color: hsl(200deg 18% 25%);
+			}
+		}
+
+		body {
+			line-height: 1.5;
+			background: white;
+			position:relative;
+		}
+
+		a,
+		a.visited {
+			color: #1565c0;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 1rem;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+    		color: #1565c0;
+		}
+
+		.header {    
+			margin: 1rem -1rem 0 -1rem;
+			width: calc(100% + 2rem);
+			background: #25262A;
+			padding: 2rem;
+			color: #eceff1;
+			border-radius: 1rem;
+			position:relative;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 0;    
+			color: #1e8ffe;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		.header h2 {
+			color: #90a4ae;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.column-list {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+		}
+
+		.column {
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: baseline;
+			line-height: 1;
+		}
+
+		.column p{
+			margin: 0;
+			margin-bottom: 0.75rem;
+		}
+
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+			flex-direction: row;
+		}
+
+		ul {
+			padding-inline-start: 0;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		.bulleted-list{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			page-break-before:always;
+		}
+
+		.bulleted-list li, .bulleted-list li *{
+			display: inline;
+			page-break-before:always;
+		}
+
+		.bulleted-list li {
+			padding: 0.5rem 1rem;
+			width: calc(50% - 0.5rem);
+			border: 1px solid #ddd;
+			background: #f5f5f5;
+			margin-right: 0.5rem;
+			align-items: center;
+			vertical-align: baseline;
+			justify-content: center;
+			margin-bottom: 0.5rem;
+			border-radius: 0.5rem;
+			page-break-before: always;
+		}
+
+		.contacts {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.contacts li{
+			width:34%;
+		}
+
+		.summary {
+			display:inline-block !important;
+			margin-top:1rem;
+		}
+
+		.summary *{
+			display:inline-block !important;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+		.techs *{
+			display: inline;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.logo-holder {
+			width: 180px;
+			position:absolute;
+			top:2rem;
+			right:2rem;
+			font-size:0.7rem;
+			text-align: center;
+
+			/* top:2.3rem;
+			display:flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+			text-align: left;
+			width: 240px;
+			font-size:0.7rem;    
+			padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+			border: 2px solid;
+			border-radius: 8px; */
+		}
+
+		.logo-holder  img{
+			width: 80%;
+			height: 60px;
+			margin: auto;
+			margin-bottom:0.5rem;
+		}
+
+		.logo-holder  span, .logo-holder span * {
+			display: inline;
+		}
+	</style>
+</head>
+
+<body>
+	<article class="page sans">
+		<div class="page-body">
+			<div class="header">
+				<h1>Mesut Kaya |  Backend Developer</h1>
+				<ul class="contacts">
+					<li><strong style="margin-right:5px;">Location:</strong><span>Istanbul</span></li>
+					<li><strong style="margin-right:5px;">Mail:</strong><span>mesutkaya2000@gmail.com</span></li>
+					<li><strong style="margin-right:5px;">Phone:</strong><span>+90 542 2457168</span></li>
+					<li><strong style="margin-right:5px;">Github:</strong><span>https://github.com/Cengmesutkaya</span></li>
+				</ul>
+				<!-- <div class="logo-holder"> -->
+					<!-- <span>This resume is prepared  <br> for <strong>Microsoft</strong></span> -->
+				<!-- </div> -->
+				<p class="summary"><span>“</span>
+				Hello, I'm Mesut. I am a Software Engineer, who is decided to be in software field since kindergarten. 
+				I love design patterns and clean code in every possible way. I have been a developer in all aspects for about 7 years. 
+				I am primarily experienced in Back-End Development, but I can also manage complete Front-End application development steps.
+				I speak Turkish and English, and I am currently trying to improve my Spanish skills.<span>”</span></p>	
+			</div>
+			<h2>Experiences</h2>
+			<hr/>
+			<div class="column-list">
+				<div class="column">
+					<h3>Mid-Senior Back-End Developer </h3>
+					<p>September 2021 </p>
+				</div>
+				<div class="column">
+					<p>LC Waikiki Corporation</p>
+					<p>Istanbul, TURKEY</p>
+				</div>
+			</div>
+			<p>
+		      Development of Web & Desktop Applications by following structured patterns, Database Management, Web design, 
+		      Web Publishing and manage servers. Develop software according to the needs of the company and 
+		      Producing cost-reducing projects.
+			</p>
+			<ul class="bulleted-list">
+				<li style="list-style-type:disc">
+					<strong>GTS Project | Internal Project</strong> 
+					<br>Role: <span> Fullstack Developer</span>
+					<br>Team: 1 Manager, 2 Analyst, 1 Designer, 8 Developers 
+					<br>Tech: <strong>Angular, .Net , MSSQL</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>Tema Portal  | Internal Project</strong> 
+					<br>Role: <span> Fullstack Developer</span>
+					<br>Team: 1 Manager, 2 Analyst, 1 Designer, 8 Developers 
+					<br>Tech: <strong>Angular, .Net , MSSQL</strong>
+				</li>
+			</ul>
+			<ul class="bulleted-list">
+			</ul>
+          <hr>
+		  			<div class="column-list">
+				<div class="column">
+					<h3>Mid-Senior Back-End Developer </h3>
+					<p>March 2021 - September 2021 </p>
+				</div>
+				<div class="column">
+					<p>Sarente BT</p>
+					<p>Istanbul, TURKEY</p>
+				</div>
+			</div>
+			<p>
+		   <br> ✔ To Manage many distributor with their customers
+           <br> ✔ Managing Erp Systems (Logo, micro etc.) and their Integration
+           <br> ✔ Managing software development processes in line with customer needs
+           <br> ✔ Carry out maintenance and support processes
+           <br> ✔ Managing documantation processes
+           <br> ✔ Performing log checks, analysis of errors and carrying out troubleshooting processes
+			</p>
+			<ul class="bulleted-list">
+				<li style="list-style-type:disc">
+					<strong>SalesArt Portal  | <a href="https://sales.salesart.io/login" target="_blank">sales.salesart.io</a></strong> 
+					<br>Role: <span> Back End Developer</span>
+					<br>Team: 1 Team Leader, 1 Analyst, 1 Designer, 6 Developers 
+					<br>Tech: <strong>Angular, .Net , MSSQL</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>Invoice Integration System  | Internal Project</strong> 
+					<br>Role: <span> Fullstack Developer</span>
+					<br>Team: 1 Manager, 1 Analyst, 1 Developer
+					<br>Tech: <strong>Metro UI, .Net , MSSQL, Logo Erp Integration</strong>
+				</li>
+			</ul>
+			<ul class="bulleted-list">
+			</ul>
+          <hr>
+			<div class="column-list" style="page-break-before:always">
+				<div class="column">
+					<h3>Team Leader</h3>
+					<p>March 2018 – March 2021</p>
+				</div>
+				<div class="column">
+					<p>Sümer Gıda Corporation</p>
+					<p>Istanbul, TURKEY</p>
+				</div>
+			</div>
+			<p>
+			Responsibility: Development of Web & Desktop Applications by following structured patterns,
+			Database Management, Web design, Web Publishing and manage servers.
+			Develop software according to the needs of the company and Producing cost-reducing projects.
+			</p>
+			<ul class="bulleted-list">
+				<li style="list-style-type:disc">
+				    <strong>SOS Project | Internal Project</strong> 
+					<br>Role: <span>Team Leader| Fullstack Developer</span>
+					<br>Team: 1 Team Leader, 1 Analyst, 2 Developers, 14 months 
+					<br>Tech: <strong>Jquery, .Net Core , MSSQL</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>Intranet Project | Internal Project</strong> 
+					<br>Role: <span> Fullstack Developer</span>
+                    <br>Team: 1 Team Leader, 1 Analyst, 2 Developers, 10 months 
+					<br>Tech: <strong>Jquery, .Net Mvc, MSSQL</strong>
+				</li>
+			</ul>
+			<div style="page-break-before:always">&nbsp;</div> 
+			
+			<h2 style="margin-top:2rem">Freelance Projects</h2>
+			<hr/>
+
+			<ul class="bulleted-list">
+				<li style="list-style-type:disc">
+					<strong>Folder Share Project | Internal Project</strong> 
+					<br>Role: <span>Team Leader | Fullstack Developer</span>
+					<br>Team: 1 Designer, 3 Developers, 8 months.
+					<br>Tech: <strong>Jquery, .Net, Asp.net Mvc, Postgresql</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>E-Commerce Project  | <a href="https://www.herboykoli.com/" target="_blank">herboykoli.com</a></strong> 
+					<br>Role: <span>Team Leader | Fullstack Developer</span>
+					<br>Team: 1 Designer, 3 Developers, 8 months.
+					<br>Tech: <strong>Jquery, .Net, Asp.net Mvc MSSQL</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>Corporate Web Site  |  <a href="https://hedefotoekspertiz.com/" target="_blank">hedefotoekspertiz.com</a></strong> 
+					<br>Role: <span>Team Leader | Fullstack Developer</span>
+					<br>Team: 1 Designer, 2 Developers, 4 months.
+					<br>Tech: <strong>Jquery, .Net, MSSQL</strong>
+				</li>
+				<li style="list-style-type:disc">
+					<strong>E-Commerce Project  | <a href="https://bidunyakoli.com/" target="_blank">bidunyakoli.com</a></strong> 
+					<br>Role: <span>Team Leader | Fullstack Developer</span>
+					<br>Team: 1 Designer, 2 Developers, 6 months.
+					<br>Tech: <strong>Jquery, .Net, Asp.net Mvc MSSQL</strong>
+				</li>
+			</ul>
+
+			<h2>Technical Skills</h2>
+			<hr/>
+			<ul class="techs">
+				<li><strong>Languages:</strong> <span>C#, SQL, .Net Core, JavaScript, HTML/CSS</span></li>
+				<li><strong>Frameworks & Libraries:</strong> <span>.Net, AngularJS, Jquery, Bootstrap, Metro UI</span></li>
+				<li><strong>Developer Tools:</strong> <span>Git, TFS, Github, VS Code, Visual Studio</span></li>
+				<li><strong>DevOps:</strong> <span> Docker, Jenkins</span></li>
+				<li><strong>Other:</strong> <span>Jira, Agile Methodologies</span></li>
+			</p>
+		</div>
+	</article>
+</body>
+
+</html>
